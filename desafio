@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{float}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+
+\title{Sumatoria de los n primeros numeros}
+\author{yucraristakhail }
+\date{April 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduccion}
+\subsection{Quien era Friedrich Gauss?}
+Johann Carl Friedrich Gaussnota nacio 30 de abril de 1777-Gotinga, 23 de febrero de 1855​ fue un matemático, astrónomo y físico alemán que contribuyó significativamente en muchos ámbitos, incluida la teoría de números, el análisis matemático, la geometría diferencial, la estadística, el álgebra, la geodesia, el magnetismo y la óptica. Considerado ya en vida como Princeps Mathematicorum, príncipe de los matemáticos, Gauss ha tenido una influencia notable en muchos campos de las matemáticas y de la ciencia. Fue de los primeros en extender el concepto de divisibilidad a otros conjuntos además de los números enteros, a parte de ser el creador de la formula de la sumatoria de los n primeros numeros a una corta edad.
+(fuente Wikipedia)
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Gauss1.png}
+    \caption{formula de la sumatoria de los n prieros numeros}
+    \label{fig:enter-label}
+\end{figure}
+En la figura \ref{fig:enter-label} se puede ver la formula de los n primeros numeros enteros.
+\section{Comprobar la formula}
+Demostraremos la formula por induccion matematica tomando como nuestra hipotesis de induccion la formula
+\begin{equation}
+    \frac{n(n+1)}{2}
+\end{equation}
+
+en primer lugar debemos comprobar que fumciona para 1
+$$1=1$$
+\begin{equation}
+    \frac{1(1+1)}{2}=1
+\end{equation}
+ahora demostraremos que es valido para (n+1)
+$$1+2+...+n+(n+1)$$
+por nuestra hipotesis de induccion sabemos que la suma hasta n es la formula (1), por lo que tenemos que:
+$$\frac{n(n+1)}{2}+(n+1)$$
+$$=\frac{n(n+1)}{2}+2\frac{(n+1)}{2}$$
+$$=\frac{n(n+1)+2(n+1)}{2}$$
+Factorizamos (n+1)
+\begin{equation}
+    =\frac{(n+1)(n+2)}{2}
+\end{equation}
+por lo que la formula queda demostrada y daremos algunos ejemplos:
+\begin{center}
+    \begin{tabular}{|1|1|c|}\hline
+    Sumatoria hasta&formula&resultado\\ \hline
+    el numero 3&3(4)/2&6\\ \hline
+    el numero 10&10(11)/2&55\\ \hline
+    el numero 100&100(101)/2&5050\\ \hline
+    el numero n&n(n+1)/2&x\\ \hline
+    \end{tabular}
+\end{center}
+Y asi este teorema nos sirve para muchas cosas, siendo una de ellas el de encontrar el n-simo numero triangular.
+\end{document}
